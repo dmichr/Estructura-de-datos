@@ -16,15 +16,15 @@ while True:
         break
 lista = []
 for i in range(numero_palabras):
-    palabra_ingresada = input(f"Dígame la palabra {i + 1}: ")
-    lista += [palabra_ingresada]
+    palabra_ingresada = input(f"Dígame la palabra {i + 1}: ") 
+    lista += [palabra_ingresada.lower()]
 #funcion para validar la entrada de palabras
 palabra_buscar = " "
 while not palabra_buscar.isalpha():
     palabra_buscar = input ("Escribe la palabra que deseas buscar: ")
 conteo = 0
 for i in lista:
-    if i == palabra_buscar:
+    if i == palabra_buscar.lower():
         conteo += 1
 if conteo == 1:
     print('La palabra -'+ palabra_buscar + '- se encuentra una vez en la lista.')
